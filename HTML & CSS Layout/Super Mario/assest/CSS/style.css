@@ -1,0 +1,181 @@
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+body{
+  font-family: 'Oxygen', sans-serif;
+}
+html {
+  font-size: 16px;
+}
+.container {
+  max-width: 61rem;
+  margin: 0rem auto;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#header {
+  background-color: red;
+  height: 5rem;
+  position: relative;
+  width: 100%;
+}
+#header h1 {
+  position: absolute;
+  padding: 0.5rem;
+  border: 0.313rem solid white;
+  border-radius: 3rem;
+  top: 0.5rem;
+  left: 37.5rem;
+  color: #fff;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 35.438rem;
+}
+.sub-banner {
+  position: absolute;
+  background: #ffc107;
+  width: 31%;
+  height: 14.313rem;
+  top: 7.93rem;
+}
+.sub-banner h2 {
+  font-size: 4.688rem;
+  margin: 1.625rem 1.313rem;
+  color: white;
+  font-family: auto;
+}
+
+.banner img {
+  width: 100%;
+  height: 35.438rem;
+}
+.navigation {
+  width: 100%;
+  height: 2.5rem;
+  background: #f4f4f4;
+  position: sticky;
+  top: 0rem;
+}
+
+
+.navigation ul li {
+  float: left;
+  list-style: none;
+  padding: 0.5rem 4.75rem;
+}
+.navigation ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-family: 'Bitter';
+}
+
+.navigation ul li a:hover {
+  color: red;
+}
+
+.text {
+  margin-top: 4.375rem;
+  margin-bottom: 1.875rem;
+}
+.text h2 {
+  font-size: 2.813rem;
+  margin-bottom: 0.313rem;
+  color: red;
+}
+.text p {
+  line-height: 1.75rem;
+  font-size: 1.125rem;
+}
+.images {
+  margin-top: 4.625rem;
+  margin-bottom: 7.063rem;
+  box-sizing: border-box;
+}
+
+.m-1 {
+  margin-right: 3.625rem;
+  margin-left: 4.125rem;
+}
+.testimonial {
+  background-color: rgb(158 158 158 / 19%);
+  width: 100%;
+  height: 16.438rem;
+  text-align: center;
+}
+.data h3 {
+  font-size: 3.75rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  padding-top: 2.375rem;
+}
+.data p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.input {
+  border: none;
+  border-radius: 2.125rem;
+  height: 1.938rem;
+  width: 9.438rem;
+  padding: 0.125rem 1.813rem;
+}
+.input:focus{
+  outline: 0rem;
+}
+.copy {
+  text-align: center;
+  background-color: red;
+  height: 3.125rem;
+}
+.copy p {
+  font-size: 1rem;
+  color: #fff;
+  padding-top: 1rem;
+}
+.font{
+  font-family: 'Reggae One', cursive;
+
+}
+
+@media (max-width:780px){
+
+  #header{ width: 100%; }
+
+  #header h1 {
+    position: absolute;
+    top: 0.5rem;
+    left: 20.5rem; }
+
+    .sub-banner h2 {
+      font-size: 2.688rem;
+       }
+
+       .navigation ul li {
+        float: none;
+        list-style: none;
+        text-align: center;}
+        
+
+        .navigation{
+          width: 100%;
+          height: 11.5rem;
+          position:static;
+        }
+        .navigation ul{
+          padding-top: 1rem;
+        }
+        .information{
+          width: 80%;
+        }
+       
+        
+}
+

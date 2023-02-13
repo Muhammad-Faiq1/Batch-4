@@ -1,0 +1,82 @@
+function bindEditButton() {
+  const editButton = document.querySelectorAll("#edit-button");
+  if (editButton.length > 0) {
+    editButton.forEach(function (singleEditButton) {
+      singleEditButton.addEventListener("click", editButtonHandler);
+    });
+  }
+  }
+
+  function editButtonHandler(event) {
+  event.preventDefault();
+  const currentElement = event.target;
+  const getItem = currentElement.parentElement.parentElement;
+  const listItem = getItem.querySelector(".list-item");
+  const listItemValue = getItem.querySelector(".list-item-value");
+  const listItemText = listItem.innerText;
+  const listItemInputValue = listItemValue.innerText;
+  // console.log(listItemText, "work")
+  const eInputValue = document.querySelector("#expense-input");
+  const aInputValue = document.querySelector("#amount-input");
+  eInputValue.value = listItemText;
+  aInputValue.value = listItemInputValue;
+
+  editHiddenInput.value = listItemText;
+}
+
+let outPut = "";
+outPut = 
+
+addExpense.innerHTML += (outPut);
+// addExpense.(outPut)
+expenseInput.value = "";
+amountInput.value = "";
+
+bindDeleteButton();
+bindEditButton();
+}
+
+const editWork = () => {
+const currentElement = event.target;
+const getElement = currentElement.parentElement.parentElement;
+const expenseInput = getElement.querySelector("#expense-input");
+const amountInput = getElement.querySelector("#amount-input");
+const expenseInputText = expenseInput.value;
+const amountIputValue = amountInput.value;
+
+if (expenseInputText == "" || amountInput.value == "") {
+  confirm("Plese Insert Expense");
+  return;
+}
+
+const expenseTitle = document.querySelectorAll(".expense-title");
+if (expenseTitle.length > 0) {
+  for (let index = 0; index < expenseTitle.length; index++) {
+    const expenseTitleInnerHtml = expenseTitle[index].innerText;
+    if (expenseTitleInnerHtml == editHiddenInput.value) {
+      // console.log(expenseTitle[index]);
+      const row = expenseTitle[index].parentElement.parentElement;
+      // console.log(row.querySelector(".expense-title"), "work")
+      row.querySelector(".expense-title").innerText= expenseInputText;
+      row.querySelector(".expense-amount").innerText  = amountIputValue;
+    }
+  }
+}
+
+
+bindDeleteButton();
+bindEditButton();
+
+
+expenseInput.value = "";
+amountInput.value = "";
+editHiddenInput.value = "";
+}
+function expenseSubmitHandler(event) {
+event.preventDefault();
+
+if(editHiddenInput.value){
+  editWork();
+}else{
+  addWork()
+}

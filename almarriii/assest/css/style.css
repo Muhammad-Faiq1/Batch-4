@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+#header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  padding: 24px 9%;
+}
+
+#logo a {
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.nav-ul {
+  display: flex;
+}
+.nav-ul li a {
+  color: rgb(255, 255, 255);
+  margin-left: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.55s ease;
+}
+.nav-ul li a:hover {
+  border-bottom: 2px solid white;
+}
+.fa-bars {
+  font-size: 25px;
+  color: white;
+  z-index: 10001;
+  display: none !important;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    254.59deg,
+    #4d9559 0%,
+    #38703d 28.53%,
+    #133917 75.53%
+  );
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.content h5 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  color: white;
+}
+.content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.content h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 90px;
+  font-weight: 400;
+  margin: 0 0 45px;
+  color: white;
+  line-height: 1;
+}
+.content p {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 40px;
+  line-height: 1.9;
+}
+.content .btn {
+  color: white;
+  background: #4d9559;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  line-height: 1, 4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.55s ease;
+}
+.content .btn:hover {
+  border: 1px solid white;
+  background: transparent;
+}
+
+.content .btn-edit {
+  margin-left: 20px;
+  background: transparent;
+  border: 1px solid white;
+  transition: all 0.55s ease;
+}
+.content .btn-edit:hover {
+  border: 1px solid transparent;
+  background: #4d9559;
+}
+.btn-edit i {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.icons {
+  position: absolute;
+  top: 50%;
+  padding: 0 9%;
+  transform: translateY(-50%);
+}
+.icons i {
+  display: block;
+  margin: 26px 0;
+  font-size: 24px;
+  color: white;
+  transform: all 0.5s ease;
+}
+.icons .blue:hover {
+  color: #215199;
+  transform: translateY(-5px);
+}
+.icons .red:hover {
+  color: #741212;
+  transform: translateY(-5px);
+}
+.icons .yellow:hover {
+  color: #d9ff00;
+  transform: translateY(-5px);
+}
+.scroll-down {
+  position: absolute;
+  bottom: 6%;
+  right: 9%;
+}
+.scroll-down i {
+  display: block;
+  padding: 12px;
+  font-size: 25px;
+  color: rgb(241, 239, 239);
+  background: #4d9559;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+
+.scroll-down i:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1149px) {
+  .content {
+    padding: 0 60px;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 993px) {
+}

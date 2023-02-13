@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS';
+}
+#header{
+    width: 100%;
+    height: 90px;
+    background-color: #e7e7e7;
+}
+
+.logo{
+    float: left;
+    width: 48%;
+    box-sizing: border-box;
+    margin-left: 125px;
+    margin-top: 31px;
+  }
+
+  .nav-bar{ 
+      float: left;
+      width: 40%;
+      margin-top: 39px;
+  }
+
+  .nav-bar ul li{
+      float: left;
+      list-style: none;
+      margin-right: 20px;
+  }
+
+  .nav-bar ul li a{
+      text-decoration: none;
+      color: #4e4e4e;
+      font-weight: 600;
+      letter-spacing: 1px;
+
+  }
+
+  .nav-bar ul li :hover{
+      color: rgb(120, 201, 226);
+      
+  }
+
+  .image-1 img{
+      width: 100%;
+  }
+
+
+
+  .busines-container{
+      margin-top: 40px !important;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #dcdcdc;
+  }
+  
+  .clearfix::after{
+      clear: both;
+      content: "";
+      display: table;
+  }
+
+  .busines-item{
+      float: left;
+      text-align: center;
+      width: 21%;
+      padding: 0 20px;
+  }
+  .busines-item h3{
+      margin-bottom: 10px;
+      color: #4e4e4e;
+  }
+
+  .busines-item p{
+      margin-bottom: 5px;
+      color: #6a6a6a;
+  }
+  .busines-item img{
+      margin-bottom: 4px;
+  }
+
+  .snap-item{
+      float: left;
+      width: 32%;
+      padding: 0px 12px;
+  }
+  .container{
+      margin: 0 auto;
+      max-width: 1280px;
+  }
+  .heading-1{
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #4e4e4e;
+  }
+
+  .snap-item img{
+      width: 100%;
+
+  }
+  .snap-item h3{
+      margin-top: 10px;
+      margin-bottom: 7px;
+      color: #4e4e4e;
+  }
+  .snap-item h4{
+      margin-bottom: 15px;
+      color: #d0d0d0;
+  }
+  .snap-item p{
+      color: #6a6a6a;
+  }
+  .padding-left-0{
+      padding-left: 0px;
+  }
+  .padding-right-0{
+      padding-right: 0px;
+  }
+  .testimonial-container{
+      background-color: #efefef;
+      width: 100%;
+      height: 200px;
+      text-align: center;
+      box-sizing: border-box;
+      margin-top: 70px;
+      padding-top: 60px;
+  }
+  .testimonial-container p{
+      color: #a1a1a1;
+      line-height: 20px;
+  }
+   .footer-container{
+       width: 100%;
+       height: 400px;
+      background-color: #1f1f1f;
+   }
+   .footer-item-container{
+       padding-top: 40px;
+       border-bottom: 3px solid #353535;
+   }
+   .footer-item-container div{
+       width: 25%;
+       float: left;
+       padding: 0 20px;
+       box-sizing: border-box;
+   }
+   .footer-item-container h2{
+       color: #6c6c6c;
+       margin-bottom: 20px;
+   }
+   .footer-item-container p{
+       color: #cacaca;
+       margin-bottom: 20px;
+       position: relative;
+   }
+   .copy{
+       color: #cacaca;
+       padding-top: 36px;
+   }
+   .twitter-footer-item p::before{
+       content: "";
+       background-image: url('/assest/images/tweet.png');
+       background-repeat: no-repeat;
+       width: 13px;
+       height: 13px;
+       position: absolute;
+       left: -21px ;
+       top: 5px ;
+   }
+
+                                         /* RESPONSIVE */
+
+   @media ( max-width: 790px ){
+      #header{
+          height: auto;
+          
+      }
+      .logo{
+          float: none;
+          width: 100%;
+          text-align: center;
+          margin-top: 0px;
+          margin-left: 0px;  
+          padding-top: 20px; 
+       }
+      .nav-bar{
+          float: none;
+          width: 100%;
+          padding-bottom: 20px;
+      }
+      .nav-bar ul li{
+          float: none;
+          width: 100%;
+          text-align: center;
+          margin-bottom: 10px;
+      }
+      .busines-item{
+        width: 100%;
+        float: none;
+        text-align: center;
+        padding: 0px;
+        margin-bottom: 15px;
+    }
+    
+    .snap-item{
+        width: 100%;
+        float: none;
+        text-align: center;
+        padding: 0px;
+    }
+    .snap-item img{
+        max-width: 550px;
+    }
+    .heading-1{
+        text-align: center;
+    }
+    .footer-container{
+        height: auto;
+    }
+    .footer-item-container div{
+        width: 100%;
+        float: none;
+        text-align: center;
+        padding: 0px 80px;
+        margin-bottom: 40px;
+    }
+    .copy{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+      }
