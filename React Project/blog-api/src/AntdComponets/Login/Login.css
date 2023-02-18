@@ -1,0 +1,12 @@
+.custom-login-container {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.custom-heading-login {
+  text-align: center;
+}
+.btn-mr {
+  margin-right: 10px;
+}
