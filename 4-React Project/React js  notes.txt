@@ -1,0 +1,25 @@
+What is React js?
+React js is a library of java script react is a component base library and make  single page applications (SPAs).
+
+How to install React in your pc?
+install node js and npm and git bash.
+
+What is jsx in React js?
+jsx stand for javaScript XML, basically
+ we use HTML in React But isn't HTML is JSX and browser don't under stand  JSX so we use babel and web pack to compile.
+
+JSX attribute?
+JSX and HTML attribute are same but in JSX we use camelCase.
+Example:
+<a  contentEdittable={true}><a/>.
+
+What is template Literals in JSX?
+Template literals are literals delimited with backtick ( ` ) characters, allowing for multi-line strings, string interpolation with embedded expressions.
+
+In React js atriute we us camelCaase amd in css also .
+
+Css type in React
+1-Inline Styling. The inline styles are specified with a JavaScript object in camelCase version of the style name. ...
+2-CSS Stylesheet. You can write styling in a separate file for your React application, and save the file with a . ...
+3-CSS Module. CSS Module is another way of adding styles to your application. ...
+4-Styled Components.
