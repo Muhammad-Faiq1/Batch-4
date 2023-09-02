@@ -12,12 +12,13 @@ const LocationContextProvider = (props) => {
     const [keyword, setKeyword] = useState("san francisco");
 
     const onSearchHandler = (searchKeyword) => {
-        setIsLoading(true)
-        setTimeout(() => {
-            if (searchKeyword) {
+        if (searchKeyword) {
+            setIsLoading(true)
+
+            setTimeout(() => {
                 setKeyword(searchKeyword)
-            }
-        }, 2000)
+            }, 1000)
+        }
     }
 
     useEffect(() => {
@@ -25,11 +26,11 @@ const LocationContextProvider = (props) => {
             return
         }
 
-        locationRequest()
+        locationRequest(keyword)
             .then((result) => {
+                setLocation(result);
                 setIsLoading(false)
                 error(null)
-                setLocation(result);
             })
             .catch((error) => {
                 setIsLoading(false)
@@ -40,8 +41,8 @@ const LocationContextProvider = (props) => {
 
     return (
         <locationContext.Provider value={{
-            location,
             isLoading,
+            location,
             error,
             keyword,
             search: onSearchHandler

@@ -6,6 +6,7 @@ import { View } from "react-native";
 import { styled } from "styled-components/native";
 import { RestaurantContext } from "../../services/restaurants/restaurants.context";
 import { locationContext } from "../../services/location/location.context";
+import { TouchableOpacity } from "react-native";
 
 // styling cs //
 const RestaurantListContainer = styled(View)`
@@ -21,29 +22,40 @@ const RestaurantList = styled(FlatList).attrs({
 
 const Loading = styled(ActivityIndicator)``;
 
-function RestaurantScreen() {
+function RestaurantScreen(props) {
+
+    const { navigation } = props;
     // const allRestaurant = Array.from({ length: 5 });
     const { isLoading, restaurant } = useContext(RestaurantContext);
-    const { location, keyword } = useContext(locationContext);
+    const { isLoading: locationLoader } = useContext(locationContext);
 
-
+    //combine both loader//
+    const bothLoader = isLoading || locationLoader
     return (
         <>
             <Search />
-            {isLoading && <Loading size={50} animating={true} color="#0000ff"></Loading>}
 
-            {!isLoading && <RestaurantListContainer>
+            {bothLoader && <Loading size={50} animating={true} color="#0000ff"></Loading>}
+
+            {!bothLoader && <RestaurantListContainer>
                 <RestaurantList
                     data={restaurant}
                     renderItem={(singleRestaurant) => {
 
 
-                        return (< CustomRestaurantCard restaurant={singleRestaurant?.item} />
-                        )
+                        return (<TouchableOpacity
+                            onPress={() => {
+                                navigation.navigate("RestaurantDetail", {
+                                    singleRestaurant: singleRestaurant.item
+                                })
+                            }}>
+                            < CustomRestaurantCard restaurant={singleRestaurant?.item} />
+
+                        </TouchableOpacity>)
                     }}
 
 
-                    keyExtractor={(singleRestaurant) => singleRestaurant.name}
+                    keyExtractor={({ singleRestaurant }) => singleRestaurant?.name}
                 />
             </RestaurantListContainer>}
         </>
